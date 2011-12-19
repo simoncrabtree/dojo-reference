@@ -1,10 +1,10 @@
 var profile = { 
 
   basePath: "../src/js",  //relative to this profile's dir
-  releaseDir: "../../../dojo-reference-release/js", //relative to baseBath
-  //layerOptimize: "shrinksafe.keepLines", 
-  //stripConsole: "all", 
-  //cssOptimize: "comments.keepLines", 
+  releaseDir: "../../../dojo-reference-release/js", //relative to basePath
+  layerOptimize: "shrinksafe", 
+  stripConsole: "all", 
+  cssOptimize: "comments", 
 
   packages:[ 
     { 
@@ -19,15 +19,15 @@ var profile = {
     name: "app", 
     location: "app" 
   } 
-  ], 
+  ],
+  
+  layers:{
+			"dojo/dojo":{
+				include:[
+					"dojo/selector/acme",
+					"app/main"
+				]
+			}
+		}
 
-  layers: { 
-
-    "dojo/dojo": { 
-      include: [ 
-        "dojo/selector/acme", 
-      ] 
-    } 
-
-  } 
 }; 
