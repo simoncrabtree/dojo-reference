@@ -1,4 +1,8 @@
-define(['dojo/ready', 'specs/smoketest', 'specs/controller_spec'], function (ready) {
+define(['dojo/ready', 
+       'specs/smoketest', 
+       'specs/controller_spec',
+       'specs/widgets/DemoWidget_spec'
+    ], function (ready) {
     ready(function () {
         var jasmineEnv = jasmine.getEnv();
         jasmineEnv.updateInterval = 1000;
