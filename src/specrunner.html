@@ -7,41 +7,23 @@
     <link rel="stylesheet" type="text/css" href="../tools/jasmine-1.1.0/jasmine.css">
     <script type="text/javascript" src="../tools/jasmine-1.1.0/jasmine.js"></script>
     <script type="text/javascript" src="../tools/jasmine-1.1.0/jasmine-html.js"></script>
-    <script type="text/javascript" src="../src/js/dojo/dojo.js" djconfig="locale:'en'"></script>
-    <!-- include source files here... -->
-    <!-- include spec files here... -->
-    <script type="text/javascript">
-        dojo.ready(function () {
-            dojo.require("specs.smoketest");
-            (function () {
-                var jasmineEnv = jasmine.getEnv();
-                jasmineEnv.updateInterval = 1000;
+    <script type="text/javascript" src="../tools/jasmine-1.1.0/jasmine.console_reporter.js"></script>
+    <script type="text/javascript" src="../tools/jasmine-1.1.0/jasmine.teamcity_reporter.js"></script>
 
-                var trivialReporter = new jasmine.TrivialReporter();
+    <script>
+        var dojoConfig = {
+            async: 1,
+            tlmSiblingOfDojo: 0,
+            isDebug: 0,
+            baseUrl: 'js/',
+            packages: [
+                { name: 'dojo', location: 'dojo' },
+                { name: 'dijit', location: 'dijit' },
+                { name: 'app', location: 'app' }
+            ], deps:['specs/main']};
 
-                jasmineEnv.addReporter(trivialReporter);
-
-                jasmineEnv.specFilter = function (spec) {
-                    return trivialReporter.specFilter(spec);
-                };
-
-                var currentWindowOnload = window.onload;
-
-                window.onload = function () {
-                    if (currentWindowOnload) {
-                        currentWindowOnload();
-                    }
-                    execJasmine();
-                };
-
-                function execJasmine() {
-                    jasmineEnv.execute();
-                }
-
-            })();
-        });
-        
     </script>
+    <script src='js/dojo/dojo.js'></script>
 </head>
 <body>
     <div id="content">
