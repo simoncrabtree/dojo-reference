@@ -1,5 +1,9 @@
-define(['app/core/dataChannel'], function(dataChannel){
+define([
+       'app/core/dataChannel',
+       'dojo/i18n!./nls/featureone'
+], function(dataChannel, localstrings){
   return {
+    local: localstrings,
     name: 'Feature One',
     currentMessageToDisplay: 'Not yet set',
     invoke: function(){

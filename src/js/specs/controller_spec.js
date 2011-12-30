@@ -13,6 +13,7 @@ define(['app/core/controller'], function (controller) {
             controller.showView({name:'view1'});
             expect(controller.currentView.name).toBe('view1');
         });
+
     });
 
 })

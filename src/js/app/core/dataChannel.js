@@ -1,6 +1,7 @@
 define(function(){
   return {
-    getData: function(){
+    getData: function(servicemethod, success){
+      alert("dataChannel - getting data...");
     }
   }
 });
