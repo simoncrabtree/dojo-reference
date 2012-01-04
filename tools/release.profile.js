@@ -25,7 +25,9 @@ var profile = {
 			"dojo/dojo":{
 				include:[
 					"dojo/selector/acme",
-					"app/main"
+					"app/main",
+          "app/features/featureone",
+          "app/features/featuretwo"
 				]
 			}
 		}

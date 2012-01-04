@@ -1,10 +1,5 @@
-define([
-       'app/core/dataChannel',
-       'dojo/i18n!./nls/featureone'
-], function(dataChannel, localstrings){
+define(['app/core/dataChannel'], function(dataChannel){
   return {
-    local: localstrings,
-    name: 'Feature One',
     currentMessageToDisplay: 'Not yet set',
     invoke: function(){
       dataChannel.getData('FeatureOneQuery', this.onDataReceived);

@@ -1,10 +1,5 @@
 define(['app/features/featureone', 'app/core/dataChannel'], function(feature, dataChannel){
   describe("Feature One", function(){
-    it("Has a name", function(){
-      expect(feature.name).toBe("Feature One");
-      expect(feature.local.name).toBe("English Feature One");
-    });
-
     it("Requests a list of things from the server", function(){
       spyOn(dataChannel, 'getData');
 

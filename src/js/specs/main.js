@@ -2,7 +2,9 @@ define(['dojo/ready',
        'specs/smoketest', 
        'specs/controller_spec',
        'specs/widgets/DemoWidget_spec',
-       'specs/features/featureone_spec'
+       'specs/features/featureone_spec',
+       'specs/features/featuretwo_spec',
+       'specs/core/featureManager_spec'
     ], function (ready) {
     ready(function () {
         var jasmineEnv = jasmine.getEnv();
